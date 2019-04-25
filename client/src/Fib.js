@@ -35,7 +35,7 @@ class Fib extends Component {
         }
         return entries;
     }
-    handleSubmit = (event) => {
+    handleSubmit = async event => {
         event.preventDefault();
         await axios.post('/api/values', {
             index: this.setate.index
