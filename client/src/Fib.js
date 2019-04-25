@@ -35,11 +35,12 @@ class Fib extends Component {
         }
         return entries;
     }
-    handleSubmit = (event)=> {
+    handleSubmit = (event) => {
         event.preventDefault();
-        await axios.post('/api/values',{
+        await axios.post('/api/values', {
             index: this.setate.index
         });
+        this.setState({ index: ''});
     };
     render(){
         return(
